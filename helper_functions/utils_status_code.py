@@ -1,4 +1,4 @@
-from utils_v2 import *
+from main_project.utils_v2 import *
 
 def test_create_status_code_v2():
     """Тестовая функция, которая показывает какой Status code имеет POST запрос после обработки и какой json-ответ приходит"""

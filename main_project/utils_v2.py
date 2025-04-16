@@ -167,7 +167,7 @@ def test_delete_pet_by_id_with_read_info(pet_id, *, time_sleep=20):
 
 #------------------------------------------------------Helper test functions
 
-def test_manual_delete_pet(pet_id, *, time_sleep=20):
+def test_manual_delete_pet(pet_id, *, time_sleep=20, fixture=False):
     """Циклическая функция, для удаления созданного питомца по id
     Используется для удаления питомца после неудачно выполненного теста
     """
@@ -188,8 +188,11 @@ def test_manual_delete_pet(pet_id, *, time_sleep=20):
     print(f'Removal attempts have been made: {count}')
 
     """Проверка теста"""
-    if code == 404:
+    if code == 404 and fixture == False :
         print(f"🟠 Pet with ID {pet_id} successfully deleted.")
+
+    elif code == 404 and fixture == True:
+        print(f"🟢 Pet with ID {pet_id} successfully deleted.")
 
     else:
         print(f"🔴 Failed to delete pet with ID {pet_id}.")

@@ -1,7 +1,6 @@
-from utils_v2 import *
+from main_project.utils_v2 import *
 
 
-# [4, "74568", (-1), 0, "***", None, "null", {}] Список проверок
 
 @pytest.mark.parametrize("pet_id", [4])
 def test_CRUD(pet_id):

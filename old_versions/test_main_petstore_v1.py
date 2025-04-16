@@ -1,4 +1,4 @@
-from utils_v2 import *
+from utils_v1 import *
 
 
 # [4, "74568", (-1), 0, "***", None, "null", {}] Список проверок
