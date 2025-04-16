@@ -31,10 +31,7 @@ def test_update(created_and_cleaned_pet):
     # Возвращаем (SCU, SCR, результат теста, SCU_response.text, SCR_response.text)
     t_update = test_update_data_pet_by_id_with_read_info(pet_id, time_sleep=10)
     # Проверяем, что возвращаемый результат теста True, если нет, то сработает исключение
-    if t_update[2]:
-        # Если тест успешно пройден
-        print("✔️✔️✔️TESTS PASSED✔️✔️✔️")
-    else:
+    if not t_update[2]:
         # Вызывает исключение остановки теста, если питомец не был создан
         raise Exception(f"❌❌❌Error: Failed to update pet with ID {pet_id}❌❌❌!")
 
